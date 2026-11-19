@@ -29,7 +29,6 @@ PDF, it is "not reported".
 
 ### 1.1 Locate the file
 - If the PDF text is already visible in the conversation, use it and skip to 1.3.
-- Otherwise look for the file at `/mnt/user-data/uploads/` and read it from disk.
 - If no PDF is present (only a link, DOI, title, or pasted abstract), stop and
   reply: "Please upload the PDF. I analyze from the file only." Do not proceed.
 - If several PDFs are attached, confirm which is the target. Treat the others
@@ -84,13 +83,7 @@ File: [filename] | Pages: [N] | Text layer: [yes/no/partial] | OCR used: [yes/no
 Sections found: [list]
 Missing or unreadable: [pages, figures, tables, appendices, or "none"]
 Metadata printed in PDF: [title, authors, year, venue, DOI or "not printed"]
-Confidence in extraction: [high / medium / low] because [reason]
 ```
-
-- **High:** proceed to Step 2.
-- **Medium:** proceed, and mark every affected claim as `[EXTRACTION UNCERTAIN]`.
-- **Low:** stop and ask the user for a better PDF, or for permission to continue
-  with the limits stated.
 
 ### Rules for this step
 - Page numbers are required for every number or quote taken later.
